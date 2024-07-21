@@ -4,7 +4,7 @@ Based in Python Flask.
 ## Introduction
 Task rest API backend using MongoDB.
 
-## SETUP
+## Setup
 Install project dependencies
 
 ````
