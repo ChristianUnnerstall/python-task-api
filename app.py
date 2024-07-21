@@ -30,8 +30,7 @@ def index():
     }, 200
 
 @app.route(APPLICATION_ROOT + '/tasks/', methods=["GET"])
-def read():
-    #     
+def read():   
     data = collection.find({})
     todos = list(data)
     todosJson = json.loads(json_util.dumps(todos))
