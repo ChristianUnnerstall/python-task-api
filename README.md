@@ -1,5 +1,8 @@
+# Task API
+Based in Python Flask.
+
 # Introduction
-Simple rest api backend as a starting point to do basic CRUD operation using python, flask and pymongo
+Task rest API backend using MongoDB.
 
 # SETUP
 Install project dependencies
