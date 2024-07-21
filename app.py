@@ -88,6 +88,11 @@ def update_one_by_id(id):
 @app.route(APPLICATION_ROOT + '/tasks/', methods=["POST"])
 def create_one():
     data = request.json
+
+    curDate = datetime.now().isoformat()
+
+    data['meta'] = {"createdAt": curDate, "modifiedAt": curDate}
+
     collection.insert_one(data)
     return {
         "status": "ok",
