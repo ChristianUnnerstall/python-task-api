@@ -72,7 +72,10 @@ def update_one_by_id(id):
     if 'description' in data:
         payload["$set"].update({'description': data['description']})
 
-    if 'title' in data or 'decription' in data:
+    if 'status' in data:
+        payload["$set"].update({'status': data['status']})
+
+    if 'title' in data or 'decription' or 'status' in data:
         payload["$set"].update({'meta.modifiedAt': curDate})
 
     data = collection.update_one(filter, payload, upsert=False)
