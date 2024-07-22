@@ -11,11 +11,18 @@ Install project dependencies
 python -m pip install -r .\requirements.txt
 ````
 
-Create a .env file with the following key/values pairs
+Create environment variables as follows
+
+Windows
+````
+$env:application_root="/api/v1.0"
+$env:mongodb_url="mongodb://<host>:<port>/"
+$env:db_name="<database>"
+$env:collection_name="<collection>"
+````
+
+## Run
 
 ````
-application_root="/api/v1.0"
-mongodb_url="mongodb://<host>:<port>/"
-db_name="<database>"
-collection_name="<collection>"
+python -m flask --app app run
 ````

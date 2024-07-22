@@ -1,13 +1,10 @@
 import os
 import json
 from flask import Flask, request
-from dotenv import load_dotenv
 from pymongo import MongoClient
 from bson import ObjectId, json_util
 from datetime import datetime
 from flask_cors import CORS
-
-load_dotenv()
 
 APPLICATION_ROOT = os.getenv("application_root")
 MONGODB_URL = os.getenv("mongodb_url")
